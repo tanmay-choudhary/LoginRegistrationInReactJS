@@ -58,11 +58,11 @@ import { useState } from "react";
 // }
 
 function Register() {
-  const [email, setEmail] = useState(" ");
+  const [email, setEmail] = useState("");
 
-  const [password, setPassword] = useState(" ");
+  const [password, setPassword] = useState("");
 
-  const [fullname, setFullname] = useState(" ");
+  const [fullname, setFullname] = useState("");
 
   function handleSubmit() {
     const data = {

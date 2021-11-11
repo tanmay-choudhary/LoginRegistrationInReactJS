@@ -25,9 +25,9 @@ import { useState } from "react";
 //   }
 // }
 function Login() {
-  const [email, setEmail] = useState(" ");
+  const [email, setEmail] = useState("");
 
-  const [password, setPassword] = useState(" ");
+  const [password, setPassword] = useState("");
 
   function handleSubmit() {
     const data = {
@@ -38,7 +38,8 @@ function Login() {
     axios
       .post("http://localhost:8097/api/login", data)
       .then((res) => {
-        if (res === true) {
+        console.log(res);
+        if (res.data === true) {
           document.write("User logged in Successfully!!");
         } else {
           document.write("invalid user");
